@@ -11,7 +11,6 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-192.png">
 <style>
-body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);height:100vh;height:100dvh}
 
 /* Layout: one-screen pocket app that always fits the phone. Header, a glass jar stage that shrinks to fit, then a bottom sheet (one activity, scrolls inside, action buttons stay pinned) with six tabs. */
 :root{
@@ -457,6 +456,10 @@ button{cursor:pointer}
   .wave,#friendBob,.btn.ready,.typing i,#friendPose.pose-roll,#friendPose.pose-shake,.sway,.crawl,.tw,.swing,.jar .bob-s,.jar .swim,.jar .pulse,.toast.show{animation:none}
   #eyesOpen,#friendPose,.pop,.jar,.shape i{transition:none}
 }
+
+/* Honor inactive panels despite component display declarations. */
+[hidden]{display:none!important}
+body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);height:100vh;height:100dvh}
 </style>
 
 </head>
